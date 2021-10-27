@@ -1,7 +1,6 @@
 {
   "name": "chatcord",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js --ext js,html,css"
@@ -10,8 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^6.0.12",
     "socket.io": "^4.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com"
+  },
+  "devDependencies": {},
+  "description": ""
 }
