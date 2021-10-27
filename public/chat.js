@@ -1,4 +1,4 @@
-const socket = io('http://127.0.0.1:8800');
+const socket = io('http://127.0.0.1:3000');
 
 let username = prompt('Enter Username', "anonymous");
 while (username === null) {
