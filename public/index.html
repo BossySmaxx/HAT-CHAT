@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatCord</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://d29fhpw069ctt2.cloudfront.net/icon/image/37750/preview.svg" type="image/x-icon">
+</head>
+<body>
+
+    <div class="wrapper bg-dark pb-1">
+        <div class="container-fluid bg-dark pt-4 text-light text-center d-flex justify-content-center align-items-center">
+            <img src="https://img.icons8.com/ios-filled/50/000000/telegram-app.png" class="icon">
+            <h1 class="logo navbar-brand">HAT-Chat</h1>
+        </div>
+        <p class="lead text-light text-center">have a talk</p>
+    </div>
+
+    <div class="chat-area bg-dark text-light">
+        <div class="container-fluid user-area">
+            <div class="overlay"></div>
+            <div class="container user-area-title text-center pt-3">
+                <p class="">Active Users</p>
+            </div>
+            <div class="wrap">
+
+                <div class="user p-4" >
+                    <h5 class="username">Aniket Chauhan</h5>
+                    <span class="time">13m ago</span>
+                </div>
+            
+            </div>
+        </div>
+<!-- message area -->
+        <div class="container messaging-area">
+            <div class="chat-wrap">
+                <div class="msg-card p-3 bg-dark">
+                    <span class="text-msg">
+                        hi aniket  bhai kaisa hai tu, itne dino baad, 
+                        tu bhai ek baat ki yaar ye tsar bomba kya hota hai
+                    </span>
+                    <span class="user-name">bunty</span>
+                </div>
+            </div>
+            <!-- message input -->
+            <div class="msg-input bg-dark p-2 mt-1 d-flex justify-content-around">
+                <input type="text" class="text-input form-control bg-dark text-light w-75" placeholder="hi! Pete, how you doin'?">
+                <button class="btn btn-lg btn-light w-25 mx-3 send">Send <i class="bi bi-telegram"></i> </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./chat.js"></script>
+</body>
+</html>

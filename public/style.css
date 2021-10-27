@@ -1,0 +1,222 @@
+*, 
+*::before, 
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: monospace;
+    font-size: 1.1rem;
+    height: 100vh;
+    background-color: red;    
+}
+
+.logo {
+    margin-left: 20px;
+    font-size: 1.5rem;
+    margin-top: 6px;
+}
+
+.lead {
+    font-size: 10px;
+    text-transform: capitalize;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
+}
+
+img.icon {
+    filter: invert(.8);
+    -webkit-filter: invert(.8);
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.chat-area {
+    border-top: 0.2px solid #2d3236;
+    width: 100%;
+    height: calc(100% - 125px);
+    display: flex;
+}
+
+.user-area-title {
+    width: 100%;
+    border-bottom: 1px dashed rgb(71, 75, 75);
+    box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.253), 0px 8px 4px -1px rgba(0, 0, 0, 0.11);
+    color: #b1b3b4;
+}
+
+.user-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 270px;
+    position: relative;
+}
+
+.wrap {
+    /* background-color: rebeccapurple; */
+    overflow: auto;
+    height: calc(100% - 65px);
+}
+
+.user {
+    width: 100%;
+    /* border: 1px solid rgb(63, 68, 68); */
+    /* background-color: red; */
+    border-bottom: 1px dashed rgb(71, 75, 75);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: rgb(63, 68, 68);
+    top: 50%;
+    left: 50%;
+    transform: scale(0) translate(-50%, -50%);
+    opacity: .2;
+    /* transform: scale(0); */
+    transition: 0.25s;
+    border-radius: 100px;
+    transform-origin:center;
+}
+.user:hover::after {
+    animation: grow 0.4s ease-in forwards;
+    -webkit-animation: grow 0.4s ease-in forwards;
+    -moz-animation: grow 0.4s ease-in forwards;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0) translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.3;
+    }
+
+    85% {
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(3) translate(-00%, -00%);
+        opacity: 0.2;
+    }
+}
+
+
+.username {
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.time {
+    font-size: 12px;
+    color: rgb(143, 135, 135);
+}
+
+.messaging-area {
+    flex: 3;
+    background-color: #292d30;
+    overflow: auto;
+    background-color: #e5e5f7;
+    background: repeating-linear-gradient( 45deg, #212529, #212529 6px, #e5e5f710 6px, #e5e5f710 30px );
+}
+
+.msg-card {
+    width: auto;
+    border-radius: 9px;
+    max-width: 800px;
+    position: relative;
+    height: auto;
+    margin: 10px;
+    border-top-left-radius: 0;
+    /* box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.495), 0 2px 9px 2px rgba(0, 0, 0, 0.119); */
+    box-shadow: 0px 4px 8px -4px rgba(0, 0, 0, 0.453), 0px 8px 4px -4px rgba(0, 0, 0, 0.21);
+}
+
+.msg-card .text-msg {
+    margin-bottom: 20px;
+    /* background-color: red; */
+    font-size: 15px;
+}
+
+.msg-card .user-name {
+    font-size: 11px;
+    text-transform: capitalize;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 1px 8px;
+    background-color: white;
+    border-radius: 30px;
+    color: black;
+}
+
+.msg-card::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #212529;
+    left: -7px;
+    /* mix-blend-mode: difference; */
+    top: 3.5px;
+    transform: rotate(45deg);
+}
+
+.chat-area .chat-wrap {
+    height: calc(100% - 80px);
+    /* background-color: red; */
+    overflow: auto;
+}
+
+.msg-input {
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 10px;
+    max-width: calc(100% - 50px);
+    box-shadow: 0 4px 3px -2px rgba(0, 0, 0, 0.795), 0 4px 6px -4px rgba(0, 0, 0, 0.219);
+}
+
+.wrapper {
+    box-shadow: 7px 5px 4px 4px black;
+}
+
+.user-area .overlay {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgb(177, 255, 20);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    animation: greenery 0.44s ease-in;
+}
+
+
+@keyframes greenery {
+    0% {
+        transform: scale(0);
+    }
+
+
+    100% {
+        transform: scale(4);
+    }
+}
