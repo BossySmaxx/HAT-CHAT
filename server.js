@@ -6,7 +6,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(express.static(path.join(__dirname, './public')));
-app.use(cors());
+app.use(cors({origin: "*"}));
 
 const server = http.createServer(app);
 const io = socketio(server);
