@@ -1,4 +1,4 @@
-const socket = io('https://hat-chat.vercel.app:3000');
+const socket = io('https://hat-chat.vercel.app:8800');
 
 let username = prompt('Enter Username', "anonymous");
 while (username === null) {

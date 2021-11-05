@@ -4,13 +4,15 @@ const socketio = require('socket.io');
 const path = require('path');
 const cors = require('cors');
 
+const PORT = 8800;
+
 const app = express();
 app.use(express.static(path.join(__dirname, './public')));
-app.use(cors({origin: "*"}));
+app.use(cors());
 
 const server = http.createServer(app);
 const io = socketio(server);
 
-server.listen(3000, console.log(":Listenign on PORT /3000"));
+server.listen(8800, console.log(`:Listenign on PORT /${8800}`));
 
 module.exports = io;
